@@ -1,6 +1,7 @@
 @api @create_student
 Feature: Create student
 
+  @create_student_1
   Scenario: 1. Create student as a team member and verify status code 403
     Given authorization token is provided for "team member"
     And user accepts content type as "application/json"
@@ -9,7 +10,7 @@ Feature: Create student
       | Lesly      | McDonald  | lesslee@email.com | 1111     | student-team-member | VA              | 15           | Online_Hackers |
     And user verifies that response status code is 403
 
-
+  @create_student_2
   Scenario: 2. Create student as a teacher and verify status code 201
     Given authorization token is provided for "teacher"
     And user accepts content type as "application/json"
